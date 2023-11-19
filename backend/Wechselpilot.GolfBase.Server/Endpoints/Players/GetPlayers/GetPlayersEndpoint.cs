@@ -1,20 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GolfBase.ApiContracts.Models;
+using GolfBase.ApiContracts.Players;
+using GolfBase.ApiContracts.Players.GetPlayers;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;
-using Wechselpilot.GolfBase.Server.Endpoints.Models;
 using Wechselpilot.GolfBase.Server.Extensions;
 
 namespace Wechselpilot.GolfBase.Server.Endpoints.Players.GetPlayers;
 
 public sealed class GetPlayersEndpoint : IEndpoint
 {
-    public sealed record GetPlayersParameters(
-        [FromQuery] int Page,
-        [FromQuery] int PageSize,
-        [FromQuery] string? SearchTerm
-    );
-
     public static string EndpointName => "GetPlayers";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

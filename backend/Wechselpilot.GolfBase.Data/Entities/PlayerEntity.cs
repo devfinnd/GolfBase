@@ -15,5 +15,7 @@ public sealed record PlayerEntity
         Name = name;
     }
 
-    private PlayerEntity() { }
+    private PlayerEntity()
+    {
+    }
 }

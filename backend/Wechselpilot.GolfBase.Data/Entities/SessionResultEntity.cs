@@ -19,5 +19,7 @@ public sealed record SessionResultEntity
         Score = score;
     }
 
-    public SessionResultEntity() { }
+    public SessionResultEntity()
+    {
+    }
 }

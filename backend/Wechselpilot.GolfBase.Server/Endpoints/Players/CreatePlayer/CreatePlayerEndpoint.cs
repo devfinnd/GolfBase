@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using GolfBase.ApiContracts.Players.CreatePlayer;
 using Microsoft.AspNetCore.Mvc;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;

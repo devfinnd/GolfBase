@@ -22,5 +22,7 @@ public sealed record SessionEntity
         Results = results;
     }
 
-    public SessionEntity() { }
+    public SessionEntity()
+    {
+    }
 }

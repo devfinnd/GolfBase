@@ -1,5 +1,8 @@
-﻿using Wechselpilot.GolfBase.Data.Entities;
-using Wechselpilot.GolfBase.Server.Endpoints.Models;
+﻿using GolfBase.ApiContracts.Maps;
+using GolfBase.ApiContracts.Models;
+using GolfBase.ApiContracts.Players;
+using GolfBase.ApiContracts.Seasons;
+using Wechselpilot.GolfBase.Data.Entities;
 
 namespace Wechselpilot.GolfBase.Server.Endpoints;
 

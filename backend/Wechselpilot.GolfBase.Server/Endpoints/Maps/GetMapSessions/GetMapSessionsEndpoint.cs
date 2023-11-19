@@ -1,20 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GolfBase.ApiContracts.Maps.GetMapSessions;
+using GolfBase.ApiContracts.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;
-using Wechselpilot.GolfBase.Server.Endpoints.Models;
 using Wechselpilot.GolfBase.Server.Extensions;
 
 namespace Wechselpilot.GolfBase.Server.Endpoints.Maps.GetMapSessions;
 
 public sealed class GetMapSessionsEndpoint : IEndpoint
 {
-    public sealed record GetMapSessionsParameters(
-        [FromRoute] Guid MapId,
-        [FromQuery] DateTime? From,
-        [FromQuery] DateTime? To
-    );
-
     public static string EndpointName => "GetMapSessions";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

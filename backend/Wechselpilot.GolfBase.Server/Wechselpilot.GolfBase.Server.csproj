@@ -7,13 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="JetBrains.Annotations" Version="2023.3.0" />
-      <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
-      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="JetBrains.Annotations" Version="2023.3.0"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="7.0.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Wechselpilot.GolfBase.Data\Wechselpilot.GolfBase.Data.csproj" />
+        <ProjectReference Include="..\GolfBase.Api.Contracts\GolfBase.Api.Contracts.csproj"/>
+        <ProjectReference Include="..\Wechselpilot.GolfBase.Data\Wechselpilot.GolfBase.Data.csproj"/>
     </ItemGroup>
 
 </Project>

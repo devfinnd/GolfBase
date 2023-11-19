@@ -19,5 +19,7 @@ public sealed record MapEntity
         Holes = holes;
     }
 
-    private MapEntity() { }
+    private MapEntity()
+    {
+    }
 }

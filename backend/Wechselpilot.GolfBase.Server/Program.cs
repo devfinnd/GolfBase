@@ -30,15 +30,9 @@ try
 
     builder.Services.AddProblemDetails();
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen(c =>
-    {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "GolfBase API", Version = "v1" });
-    });
+    builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "GolfBase API", Version = "v1" }); });
 
-    builder.Services.AddDbContext<GolfDbContext>(opt =>
-    {
-        opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-    });
+    builder.Services.AddDbContext<GolfDbContext>(opt => { opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")); });
 
     WebApplication app = builder.Build();
 
@@ -66,7 +60,14 @@ try
     seasons.Map<GetSeasonEndpoint>("/{seasonId}");
     seasons.Map<GetSeasonSessionsEndpoint>("/{seasonId}/sessions");
 
+    using (IServiceScope scope = app.Services.CreateScope())
+    {
+        var contenxt = scope.ServiceProvider.GetRequiredService<GolfDbContext>();
+        await contenxt.Database.MigrateAsync();
+    }
+
     app.Run();
+
 }
 catch (Exception ex)
 {

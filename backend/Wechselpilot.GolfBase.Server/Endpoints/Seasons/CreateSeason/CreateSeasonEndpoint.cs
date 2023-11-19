@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using GolfBase.ApiContracts.Seasons.CreateSeason;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wechselpilot.GolfBase.Data;
@@ -10,10 +11,6 @@ namespace Wechselpilot.GolfBase.Server.Endpoints.Seasons.CreateSeason;
 
 public sealed class CreateSeasonEndpoint : IEndpoint
 {
-    public sealed record CreateSeasonParameters(
-        [FromBody] CreateSeasonRequest Body
-    );
-
     public static string EndpointName => "CreateSeason";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

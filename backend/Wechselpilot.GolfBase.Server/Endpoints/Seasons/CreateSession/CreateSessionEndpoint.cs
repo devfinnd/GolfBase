@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using GolfBase.ApiContracts.Seasons.CreateSession;
 using Microsoft.AspNetCore.Mvc;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;
@@ -8,11 +9,6 @@ namespace Wechselpilot.GolfBase.Server.Endpoints.Seasons.CreateSession;
 
 public sealed class CreateSessionEndpoint : IEndpoint
 {
-    public sealed record CreateSessionParameters(
-        [FromRoute] Guid SeasonId,
-        [FromBody] CreateSessionRequest Body
-    );
-
     public static string EndpointName => "CreateSession";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

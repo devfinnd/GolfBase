@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using GolfBase.ApiContracts.Maps.CreateMap;
 using Microsoft.AspNetCore.Mvc;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;
@@ -9,10 +10,6 @@ namespace Wechselpilot.GolfBase.Server.Endpoints.Maps.CreateMap;
 
 public sealed class CreateMapEndpoint : IEndpoint
 {
-    public sealed record CreateMapParameters(
-        [FromBody] CreateMapRequest Body
-    );
-
     public static string EndpointName => "CreateMap";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

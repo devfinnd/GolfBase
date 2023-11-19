@@ -1,18 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GolfBase.ApiContracts.Maps.GetMap;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;
-using Wechselpilot.GolfBase.Server.Endpoints.Models;
 using Wechselpilot.GolfBase.Server.Extensions;
 
 namespace Wechselpilot.GolfBase.Server.Endpoints.Maps.GetMap;
 
 public sealed class GetMapEndpoint : IEndpoint
 {
-    public sealed record GetMapParameters(
-        [FromRoute] Guid MapId
-    );
-
     public static string EndpointName => "GetMap";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

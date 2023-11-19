@@ -1,19 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GolfBase.ApiContracts.Models;
+using GolfBase.ApiContracts.Seasons;
+using GolfBase.ApiContracts.Seasons.GetSeasons;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wechselpilot.GolfBase.Data;
 using Wechselpilot.GolfBase.Data.Entities;
-using Wechselpilot.GolfBase.Server.Endpoints.Models;
 using Wechselpilot.GolfBase.Server.Extensions;
 
 namespace Wechselpilot.GolfBase.Server.Endpoints.Seasons.GetSeasons;
 
 public sealed class GetSeasonsEndpoint : IEndpoint
 {
-    public sealed record GetSeasonsParameters(
-        [FromQuery] int Page,
-        [FromQuery] int PageSize
-    );
-
     public static string EndpointName => "GetSeasons";
 
     public static RouteHandlerBuilder ConfigureEndpoint(IEndpointRouteBuilder builder, string route) =>

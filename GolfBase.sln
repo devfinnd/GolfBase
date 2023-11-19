@@ -6,6 +6,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wechselpilot.GolfBase.Serve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wechselpilot.GolfBase.Data", "backend\Wechselpilot.GolfBase.Data\Wechselpilot.GolfBase.Data.csproj", "{2E15474E-E59B-4991-BAB3-90B3D3207C37}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{DEA5CF12-54CA-4CFD-B810-7C9244F1C620}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{C0A2A798-1D47-4349-B610-665D7F0A1732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfBase.CompetitionClient", "GolfBase.CompetitionClient\GolfBase.CompetitionClient.csproj", "{C5351D0F-78D3-40EA-8914-41E4ED95AB7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolfBase.Api.Contracts", "backend\GolfBase.Api.Contracts\GolfBase.Api.Contracts.csproj", "{6A0D0B06-267C-4350-917D-8F3E2B3B099F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +22,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CBB603E2-368F-4F8F-8FB9-0C9509B244E0} = {8052875E-35F3-44CE-9980-93A71262580D}
 		{2E15474E-E59B-4991-BAB3-90B3D3207C37} = {8052875E-35F3-44CE-9980-93A71262580D}
+		{C5351D0F-78D3-40EA-8914-41E4ED95AB7E} = {C0A2A798-1D47-4349-B610-665D7F0A1732}
+		{6A0D0B06-267C-4350-917D-8F3E2B3B099F} = {8052875E-35F3-44CE-9980-93A71262580D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CBB603E2-368F-4F8F-8FB9-0C9509B244E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +34,13 @@ Global
 		{2E15474E-E59B-4991-BAB3-90B3D3207C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E15474E-E59B-4991-BAB3-90B3D3207C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E15474E-E59B-4991-BAB3-90B3D3207C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5351D0F-78D3-40EA-8914-41E4ED95AB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5351D0F-78D3-40EA-8914-41E4ED95AB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5351D0F-78D3-40EA-8914-41E4ED95AB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5351D0F-78D3-40EA-8914-41E4ED95AB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0D0B06-267C-4350-917D-8F3E2B3B099F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0D0B06-267C-4350-917D-8F3E2B3B099F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0D0B06-267C-4350-917D-8F3E2B3B099F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0D0B06-267C-4350-917D-8F3E2B3B099F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

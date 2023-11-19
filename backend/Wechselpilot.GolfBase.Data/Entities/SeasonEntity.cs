@@ -20,5 +20,7 @@ public sealed record SeasonEntity
         Maps = maps;
     }
 
-    public SeasonEntity() { }
+    public SeasonEntity()
+    {
+    }
 }
